@@ -4,6 +4,7 @@ $text-main: "Montserrat", sans-serif;
 
 $fw-light: 300;
 $fw-regular: 400;
+$fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
 $fw-extrabold: 800;
@@ -57,12 +58,12 @@ $media-breakpoint-xl: 1200px;
     display: inline-block;
   }
 
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  //   display: block;
-  //   margin: 0 auto;
-  // }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   button {
     display: block;
@@ -207,6 +208,130 @@ $media-breakpoint-xl: 1200px;
       &--4 {
         top: 15%;
         right: 5%;
+      }
+    }
+  }
+
+  .es-footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-2.53deg, #a2c5e9, #e5eff9);
+
+    @media (min-width: $media-breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      padding: 20px 20px 0;
+
+      @media (min-width: $media-breakpoint-md) {
+        display: flex;
+        gap: 60px;
+      }
+    }
+
+    &__star {
+      display: none;
+      position: absolute;
+
+      @media (min-width: $media-breakpoint-lg) {
+        display: block;
+      }
+
+      &--1 {
+        top: 22%;
+        left: 5%;
+      }
+
+      &--2 {
+        top: 33%;
+        right: 42%;
+      }
+    }
+
+    &__start-wave {
+      background-color: #009edc;
+
+      &--mb {
+        @media (min-width: $media-breakpoint-md) {
+          display: none;
+        }
+      }
+
+      &--dt {
+        display: none;
+
+        @media (min-width: $media-breakpoint-md) {
+          display: block;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 36px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      @media (min-width: $media-breakpoint-md) {
+        font-size: clamp(1.6875 * $fs-base, 3.7594vw - 0.117 * $fs-base, 2.9375 * $fs-base);
+        margin-top: 30px;
+      }
+    }
+
+    &-img {
+      margin-bottom: -50px;
+    }
+
+    &__disclaimer {
+      position: relative;
+      background-color: #fff;
+
+      &-wave {
+        &--mb {
+          position: absolute;
+          bottom: 70%;
+          left: 0;
+
+          @media (min-width: $media-breakpoint-md) {
+            display: none;
+          }
+        }
+
+        &--dt {
+          display: none;
+
+          @media (min-width: $media-breakpoint-md) {
+            display: block;
+          }
+        }
+      }
+
+      &-text {
+        position: relative;
+        text-align: center;
+        font-weight: $fw-medium;
+
+        &--mb {
+          font-size: 10px;
+          padding: 0 0 30px;
+
+          @media (min-width: $media-breakpoint-md) {
+            display: none;
+          }
+        }
+
+        &--dt {
+          display: none;
+          font-size: 8px;
+
+          @media (min-width: $media-breakpoint-md) {
+            display: block;
+          }
+        }
       }
     }
   }

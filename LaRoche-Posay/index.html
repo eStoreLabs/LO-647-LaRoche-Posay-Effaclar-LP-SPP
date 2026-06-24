@@ -12,6 +12,14 @@
   <body style="margin: 0">
     <div id="es-rc">
       <div id="es-rc-content">
+        <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+          <defs>
+            <linearGradient id="es-footer-wave-gradient" x1="52.2%" y1="100%" x2="47.8%" y2="0%">
+              <stop offset="0%" stop-color="#deebf8" />
+              <stop offset="100%" stop-color="#e5eff9" />
+            </linearGradient>
+          </defs>
+        </svg>
         <div class="es-routine">
           <img src="./images/routine-bg-star-1.png" alt="" class="es-routine__bg-star es-routine__bg-star--1" />
           <img src="./images/routine-bg-star-2.png" alt="" class="es-routine__bg-star es-routine__bg-star--2" />
@@ -102,6 +110,62 @@
             </div>
           </div>
         </div>
+
+        <div class="es-footer">
+          <img src="./images/footer-star-1.png" alt="" class="es-footer__star es-footer__star--1" />
+          <img src="./images/footer-star-2.png" alt="" class="es-footer__star es-footer__star--2" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598 97" class="es-footer__start-wave es-footer__start-wave--mb">
+            <path
+              fill-rule="evenodd"
+              fill="url(#es-footer-wave-gradient)"
+              d="M598,33.1 C598,33.1 408.219,59.377 256.596,45 C104.974,30.623 0,0 0,0 L0,97 L598,97 Z"
+            />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 52" class="es-footer__start-wave es-footer__start-wave--dt">
+            <path
+              fill-rule="evenodd"
+              fill="url(#es-footer-wave-gradient)"
+              d="M1300,33.1 C1300,33.1 908.631,59.377 560,44.1 C211.369,30.623 0,0 0,0 L0,97 L1300,97 Z"
+            />
+          </svg>
+
+          <div class="es-footer__content">
+            <div>
+              <picture>
+                <source media="(min-width: 768px)" srcset="./images/footer-logo-dt.png" />
+                <img src="./images/footer-logo.png" alt="" />
+              </picture>
+              <h2 class="es-footer__title">
+                wybierz markę <strong>nr 1<br />w rekomendacjach<br />dermatologów*</strong>
+              </h2>
+              <p class="es-footer__disclaimer-text es-footer__disclaimer-text--dt">
+                *Badanie marki La Roche-Posay, rynek dermokosmetyków z udziałem dermatologów w Polsce. AplusA, I-IV 2025.
+              </p>
+            </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./images/footer-img-dt.png" width="429" height="397" />
+              <img src="./images/footer-img.png" alt="" class="es-footer-img" />
+            </picture>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 60" class="es-footer__disclaimer-wave--dt">
+            <path fill-rule="evenodd" fill="#fff" d="M1300,34 C1300,34 908.631,59.377 560,45 C211.369,30.623 0,0 0,0 L0,97 L1300,97 Z" />
+          </svg>
+
+          <div class="es-footer__disclaimer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 678 97" class="es-footer__disclaimer-wave--mb">
+              <path
+                fill-rule="evenodd"
+                fill="#fff"
+                d="M665.673,33.1000 C665.673,33.1000 462.830,59.377 290.924,45.000 C119.017,30.623 0.493,0.000 0.493,0.000 L0.000,89.000 L678.000,96.1000 L665.673,33.1000 Z"
+              />
+            </svg>
+            <p class="es-footer__disclaimer-text es-footer__disclaimer-text--mb">
+              *Badanie marki La Roche-Posay, rynek dermokosmetyków z udziałem<br />dermatologów w Polsce. AplusA, I-IV 2025.
+            </p>
+          </div>
+        </div>
+
+        <div></div>
       </div>
     </div>
   </body>
