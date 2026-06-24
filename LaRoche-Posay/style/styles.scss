@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+$text-main: "", sans-serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-extrabold: 800;
+
+$fs-base: 16px;
+
+$color-main: #000000;
+$color-bg: #fff;
+
+$media-breakpoint-sm: 576px;
+$media-breakpoint-md: 768px;
+$media-breakpoint-lg: 992px;
+$media-breakpoint-xl: 1200px;
+
+#es-rc #es-rc-content {
+  font-family: $text-main;
+  font-size: $fs-base;
+  font-weight: $fw-regular;
+  line-height: 1.2;
+  color: $color-main;
+  background-color: $color-bg;
+  max-width: 1300px;
+  margin: auto;
+
+  &::selection {
+    // background-color: ;
+    color: #fff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  strong {
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0;
+  }
+
+  strong {
+    font-weight: $fw-bold;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    display: block;
+  }
+
+  // accessibility improvement for animations
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+#es-rc #es-rc-content {
+  font-family: "", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000000;
+  background-color: #fff;
+  max-width: 1300px;
+  margin: auto;
+}
+#es-rc #es-rc-content::-moz-selection {
+  color: #fff;
+}
+#es-rc #es-rc-content::selection {
+  color: #fff;
+}
+#es-rc #es-rc-content * {
+  box-sizing: border-box;
+}
+#es-rc #es-rc-content h1,
+#es-rc #es-rc-content h2,
+#es-rc #es-rc-content h3,
+#es-rc #es-rc-content h4,
+#es-rc #es-rc-content p,
+#es-rc #es-rc-content strong {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  margin: 0;
+}
+#es-rc #es-rc-content strong {
+  font-weight: 700;
+}
+#es-rc #es-rc-content a {
+  display: inline-block;
+}
+#es-rc #es-rc-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#es-rc #es-rc-content button {
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  #es-rc #es-rc-content * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
