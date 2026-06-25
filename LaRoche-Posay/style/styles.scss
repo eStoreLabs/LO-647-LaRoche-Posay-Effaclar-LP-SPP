@@ -427,6 +427,33 @@ $media-breakpoint-xl: 1200px;
         margin-top: auto;
         width: 70%;
       }
+
+      &--visible {
+        transform: translateX(-88%);
+      }
+
+      &--inside {
+        position: absolute;
+        bottom: 2.5%;
+        left: 15%;
+        height: 50%;
+        z-index: -1;
+        transition: transform 0.3s ease;
+
+        @media (min-width: $media-breakpoint-sm) {
+          left: 20%;
+        }
+
+        @media (min-width: 600px) {
+          left: 27%;
+        }
+
+        @media (min-width: $media-breakpoint-md) {
+          bottom: 4%;
+          left: 5px;
+          height: 75%;
+        }
+      }
     }
 
     &__wave {
