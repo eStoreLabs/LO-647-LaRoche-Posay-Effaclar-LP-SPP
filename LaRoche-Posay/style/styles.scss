@@ -87,15 +87,27 @@ $media-breakpoint-xl: 1200px;
   }
 
   @keyframes es-pulse {
-    0% {
+    0%,
+    100% {
       transform: scale(1);
     }
     50% {
       transform: scale(1.05);
     }
+  }
+
+  @keyframes es-twinkle {
+    0%,
     100% {
-      transform: scale(1);
+      opacity: 1;
     }
+    50% {
+      opacity: 0.65;
+    }
+  }
+
+  .es-star {
+    animation: es-twinkle 3.25s ease-in-out infinite;
   }
 
   .es-kv {

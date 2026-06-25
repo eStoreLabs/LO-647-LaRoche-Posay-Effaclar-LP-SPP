@@ -59,15 +59,23 @@
   }
 }
 @keyframes es-pulse {
-  0% {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.05);
   }
-  100% {
-    transform: scale(1);
+}
+@keyframes es-twinkle {
+  0%, 100% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0.65;
+  }
+}
+#es-rc #es-rc-content .es-star {
+  animation: es-twinkle 3.25s ease-in-out infinite;
 }
 #es-rc #es-rc-content .es-kv__container {
   background: linear-gradient(179.95deg, #a2c5e9, #ffffff);
