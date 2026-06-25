@@ -845,6 +845,13 @@
 #es-rc #es-rc-content .es-footer-img {
   margin-bottom: -50px;
   flex: 1;
+  transform: translateY(35%);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+#es-rc #es-rc-content .es-footer-img--visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 #es-rc #es-rc-content .es-footer__disclaimer {
   position: relative;
@@ -862,6 +869,7 @@
 }
 #es-rc #es-rc-content .es-footer__disclaimer-wave--dt {
   display: none;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-footer__disclaimer-wave--dt {

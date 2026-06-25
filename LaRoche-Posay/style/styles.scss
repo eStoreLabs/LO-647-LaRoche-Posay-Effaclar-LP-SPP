@@ -900,6 +900,16 @@ $media-breakpoint-xl: 1200px;
     &-img {
       margin-bottom: -50px;
       flex: 1;
+      transform: translateY(35%);
+      opacity: 0;
+      transition:
+        transform 0.8s ease-out,
+        opacity 0.8s ease-out;
+
+      &--visible {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     &__disclaimer {
@@ -919,6 +929,7 @@ $media-breakpoint-xl: 1200px;
 
         &--dt {
           display: none;
+          z-index: 1;
 
           @media (min-width: $media-breakpoint-md) {
             display: block;
