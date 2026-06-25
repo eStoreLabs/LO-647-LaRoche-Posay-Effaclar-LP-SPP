@@ -61,6 +61,8 @@ $media-breakpoint-xl: 1200px;
 
   a {
     display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   img {
@@ -81,6 +83,18 @@ $media-breakpoint-xl: 1200px;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  @keyframes es-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 
@@ -716,11 +730,18 @@ $media-breakpoint-xl: 1200px;
         }
       }
 
+      &:hover {
+        .es-routine__product-img {
+          animation: es-pulse 2.5s infinite ease-in-out;
+        }
+      }
+
       &-img {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        translate: -50% -50%;
+        transition: transform 0.3s ease;
 
         &--1 {
           margin-top: -6%;

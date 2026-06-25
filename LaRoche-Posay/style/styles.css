@@ -38,6 +38,8 @@
 }
 #es-rc #es-rc-content a {
   display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
 #es-rc #es-rc-content img {
   max-width: 100%;
@@ -54,6 +56,17 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+@keyframes es-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 #es-rc #es-rc-content .es-kv__container {
@@ -687,11 +700,15 @@
     font-size: 24px;
   }
 }
+#es-rc #es-rc-content .es-routine__product:hover .es-routine__product-img {
+  animation: es-pulse 2.5s infinite ease-in-out;
+}
 #es-rc #es-rc-content .es-routine__product-img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
+  transition: transform 0.3s ease;
 }
 #es-rc #es-rc-content .es-routine__product-img--1 {
   margin-top: -6%;
