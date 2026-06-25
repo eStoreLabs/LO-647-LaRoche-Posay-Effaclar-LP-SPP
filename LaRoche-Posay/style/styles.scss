@@ -50,6 +50,10 @@ $media-breakpoint-xl: 1200px;
     margin: 0;
   }
 
+  picture {
+    display: contents;
+  }
+
   strong {
     font-weight: $fw-bold;
   }
@@ -298,6 +302,91 @@ $media-breakpoint-xl: 1200px;
           display: none;
         }
       }
+    }
+  }
+
+  .es-duo {
+    background: linear-gradient(-2.53deg, #a2c5e9, #e5eff9);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+
+    @media (min-width: $media-breakpoint-md) {
+      flex-direction: row;
+      text-align: left;
+      padding-left: 50px;
+      padding-right: 50px;
+      gap: 30px;
+    }
+
+    &__title {
+      font-size: clamp(1.5 * $fs-base, 0.4643 * $fs-base + 5.7143vw, 2.25 * $fs-base);
+      text-transform: uppercase;
+
+      @media (min-width: $media-breakpoint-md) {
+        font-size: clamp(1.5 * $fs-base, 0.4173 * $fs-base + 2.2556vw, 2.25 * $fs-base);
+      }
+    }
+
+    &__subtitle {
+      font-size: clamp(1 * $fs-base, 0.2232 * $fs-base + 4.2857vw, 1.5625 * $fs-base);
+      text-transform: uppercase;
+      margin-top: 10px;
+
+      @media (min-width: $media-breakpoint-md) {
+        font-size: clamp(1 * $fs-base, 0.5489 * $fs-base + 0.9398vw, 1.3125 * $fs-base);
+        margin-bottom: 30px;
+      }
+
+      & > br {
+        display: none;
+
+        @media (min-width: $media-breakpoint-md) {
+          display: block;
+        }
+      }
+    }
+
+    &__disclaimer {
+      font-size: clamp(0.625 * $fs-base, 0.8839 * $fs-base + -1.4286vw, 0.4375 * $fs-base);
+      order: 1;
+      margin-top: 15px;
+      z-index: 1;
+      position: relative;
+      margin-bottom: 40px;
+
+      @media (min-width: $media-breakpoint-md) {
+        font-size: 8px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text-wrapper {
+      display: contents;
+
+      @media (min-width: $media-breakpoint-md) {
+        display: block;
+        width: 30%;
+      }
+    }
+
+    &__img {
+      margin-top: 30px;
+      z-index: 1;
+      position: relative;
+
+      @media (min-width: $media-breakpoint-md) {
+        margin-top: -10px;
+        width: 70%;
+      }
+    }
+
+    &__wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
   }
 

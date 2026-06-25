@@ -28,6 +28,9 @@
   color: inherit;
   margin: 0;
 }
+#es-rc #es-rc-content picture {
+  display: contents;
+}
 #es-rc #es-rc-content strong {
   font-weight: 700;
 }
@@ -265,6 +268,90 @@
   #es-rc #es-rc-content .es-kv__cta-text > br {
     display: none;
   }
+}
+#es-rc #es-rc-content .es-duo {
+  background: linear-gradient(-2.53deg, #a2c5e9, #e5eff9);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo {
+    flex-direction: row;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 30px;
+  }
+}
+#es-rc #es-rc-content .es-duo__title {
+  font-size: clamp(24px, 7.4288px + 5.7143vw, 36px);
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__title {
+    font-size: clamp(24px, 6.6768px + 2.2556vw, 36px);
+  }
+}
+#es-rc #es-rc-content .es-duo__subtitle {
+  font-size: clamp(16px, 3.5712px + 4.2857vw, 25px);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__subtitle {
+    font-size: clamp(16px, 8.7824px + 0.9398vw, 21px);
+    margin-bottom: 30px;
+  }
+}
+#es-rc #es-rc-content .es-duo__subtitle > br {
+  display: none;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__subtitle > br {
+    display: block;
+  }
+}
+#es-rc #es-rc-content .es-duo__disclaimer {
+  font-size: clamp(10px, 14.1424px - 1.4286vw, 7px);
+  order: 1;
+  margin-top: 15px;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__disclaimer {
+    font-size: 8px;
+    margin-bottom: 0;
+  }
+}
+#es-rc #es-rc-content .es-duo__text-wrapper {
+  display: contents;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__text-wrapper {
+    display: block;
+    width: 30%;
+  }
+}
+#es-rc #es-rc-content .es-duo__img {
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-duo__img {
+    margin-top: -10px;
+    width: 70%;
+  }
+}
+#es-rc #es-rc-content .es-duo__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 #es-rc #es-rc-content .es-routine {
   padding: 0 20px;
