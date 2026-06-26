@@ -102,10 +102,10 @@ $media-breakpoint-xl: 1200px;
       transform: rotate(0deg);
     }
     25% {
-      transform: rotate(10deg);
+      transform: rotate(15deg);
     }
     75% {
-      transform: rotate(-10deg);
+      transform: rotate(-15deg);
     }
   }
 
@@ -510,6 +510,7 @@ $media-breakpoint-xl: 1200px;
 
   .es-cream {
     background: linear-gradient(-2.53deg, #a2c5e9, #e5eff9);
+    overflow: hidden;
     text-align: center;
     padding-top: 30px;
     position: relative;
@@ -597,15 +598,20 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__star {
-      display: none;
+      max-width: 17%;
       position: absolute;
 
+      @media (min-width: $media-breakpoint-xs) {
+        max-width: 20%;
+      }
+
       @media (min-width: $media-breakpoint-sm) {
-        display: block;
+        max-width: unset;
       }
 
       &--1 {
         top: 28%;
+        left: 0;
 
         @media (min-width: $media-breakpoint-md) {
           top: 25%;
