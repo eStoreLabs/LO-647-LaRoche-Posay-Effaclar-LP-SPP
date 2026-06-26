@@ -1,13 +1,14 @@
 const wrapper = document.querySelector("#es-rc #es-rc-content .es-kv__eye-wrapper");
 const eye = document.querySelector("#es-rc #es-rc-content .es-kv__eye");
+const anchor = document.querySelector("#es-rc #es-rc-content .es-kv__eye-anchor");
 const isMobile = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 const moveLimit = 0.04;
 
 window.addEventListener("mousemove", (e) => {
-  const rect = wrapper.getBoundingClientRect();
+  const anchorRect = anchor.getBoundingClientRect();
 
-  const centerX = rect.left + rect.width / 2;
-  const centerY = rect.top + rect.height / 2;
+  const centerX = anchorRect.left;
+  const centerY = anchorRect.top;
 
   const mouseX = e.clientX;
   const mouseY = e.clientY;
@@ -16,7 +17,8 @@ window.addEventListener("mousemove", (e) => {
 
   const angle = Math.atan2(deltaY, deltaX);
 
-  const maxMove = rect.width * moveLimit;
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const maxMove = wrapperRect.width * moveLimit;
 
   const moveX = Math.cos(angle) * maxMove;
   const moveY = Math.sin(angle) * maxMove;

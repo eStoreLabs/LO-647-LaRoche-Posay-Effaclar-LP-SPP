@@ -68,10 +68,13 @@
 }
 @keyframes es-twinkle {
   0%, 100% {
-    opacity: 1;
+    transform: rotate(0deg);
   }
-  50% {
-    opacity: 0.65;
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
   }
 }
 #es-rc #es-rc-content .es-star {
@@ -167,6 +170,13 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+#es-rc #es-rc-content .es-kv__eye-anchor {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: 26%;
+  top: 28%;
 }
 #es-rc #es-rc-content .es-kv__eye-down--mobile {
   transition: transform 0.4s ease-out;
@@ -437,7 +447,7 @@
   left: 15%;
   height: 50%;
   z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.8s ease;
 }
 @media (min-width: 500px) {
   #es-rc #es-rc-content .es-duo__img--inside {
@@ -789,25 +799,25 @@
 }
 #es-rc #es-rc-content .es-routine__product-img--3 {
   margin-top: 7%;
-  margin-left: 4%;
+  margin-left: 6%;
 }
 #es-rc #es-rc-content .es-routine__img {
   position: relative;
 }
 #es-rc #es-rc-content .es-routine__img-num {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 #es-rc #es-rc-content .es-routine__img-num--1 {
   left: 10%;
   top: -2%;
 }
 #es-rc #es-rc-content .es-routine__img-num--2 {
-  left: 0;
+  left: -1%;
   top: 35%;
 }
 #es-rc #es-rc-content .es-routine__img-num--3 {
-  left: 0;
+  left: -6%;
   top: 3%;
 }
 #es-rc #es-rc-content .es-routine__bg-star {

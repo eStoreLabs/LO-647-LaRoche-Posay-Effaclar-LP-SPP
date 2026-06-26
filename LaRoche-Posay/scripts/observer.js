@@ -21,12 +21,15 @@ const duoObs = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("es-duo__img--visible");
-        duoObs.unobserve(entry.target);
+      } else {
+        if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove("es-duo__img--visible");
+        }
       }
     });
   },
   {
-    threshold: 0.6,
+    threshold: 0.75,
   },
 );
 
