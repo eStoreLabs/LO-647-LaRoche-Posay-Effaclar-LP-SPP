@@ -116,6 +116,7 @@ $media-breakpoint-xl: 1200px;
       position: relative;
       display: flex;
       flex-direction: column;
+      min-height: 280px;
 
       @media (min-width: $media-breakpoint-lg) {
         flex-direction: row;
@@ -168,6 +169,39 @@ $media-breakpoint-xl: 1200px;
         @media (min-width: $media-breakpoint-xl) {
           width: unset;
         }
+      }
+    }
+
+    &__eye {
+      position: absolute;
+      z-index: 1;
+      width: 7%;
+      left: 23%;
+      top: 25%;
+      will-change: transform;
+      transform-origin: center center;
+
+      @media (min-width: $media-breakpoint-md) {
+        width: 5.5%;
+        left: 24%;
+        top: 25%;
+      }
+
+      @media (min-width: $media-breakpoint-lg) {
+        width: 6.5%;
+        left: 23%;
+        top: 24%;
+      }
+
+      &-wrapper {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      &-down--mobile {
+        transition: transform 0.4s ease-out;
+        transform: translateY(60%);
       }
     }
 
