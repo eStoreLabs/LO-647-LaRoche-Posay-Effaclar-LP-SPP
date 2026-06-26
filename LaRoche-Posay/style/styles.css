@@ -71,10 +71,10 @@
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(10deg);
+    transform: rotate(15deg);
   }
   75% {
-    transform: rotate(-10deg);
+    transform: rotate(-15deg);
   }
 }
 #es-rc #es-rc-content .es-star {
@@ -473,6 +473,7 @@
 }
 #es-rc #es-rc-content .es-cream {
   background: linear-gradient(-2.53deg, #a2c5e9, #e5eff9);
+  overflow: hidden;
   text-align: center;
   padding-top: 30px;
   position: relative;
@@ -557,16 +558,22 @@
   margin: 0;
 }
 #es-rc #es-rc-content .es-cream__star {
-  display: none;
+  max-width: 17%;
   position: absolute;
+}
+@media (min-width: 386px) {
+  #es-rc #es-rc-content .es-cream__star {
+    max-width: 20%;
+  }
 }
 @media (min-width: 500px) {
   #es-rc #es-rc-content .es-cream__star {
-    display: block;
+    max-width: unset;
   }
 }
 #es-rc #es-rc-content .es-cream__star--1 {
   top: 28%;
+  left: 0;
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-cream__star--1 {
